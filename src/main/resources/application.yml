@@ -13,8 +13,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/test
     username: root
     password: 123456
-    db-name: flowable
-    filters: log4j,wall,mergeStat
 
 logging:
   level.root: info
