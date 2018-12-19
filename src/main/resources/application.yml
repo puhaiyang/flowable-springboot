@@ -1,0 +1,38 @@
+###################  项目启动端口  ###################
+server:
+  port: 8080
+
+###################  spring配置  ###################
+spring:
+  profiles:
+    active: dev
+##########################################################
+###################  开发环境的profile  ###################
+##########################################################
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+    db-name: flowable
+    filters: log4j,wall,mergeStat
+
+#flowable数据源和多数据源配置
+guns:
+  flowable:
+    datasource:
+      url: jdbc:mysql://127.0.0.1:3306/test
+      username: root
+      password: root
+
+logging:
+  level.root: info
+  level.com.haiyang: debug
+  path: logs/
+  file: flowable-test.log
+
+
+---
+logging:
+  level.root: warn
+  path: logs/
+  file: flowable-test.log
